@@ -1,0 +1,16 @@
+
+mat-form-field{
+    width:98%;
+  }
+  
+  .btn{
+    display: table-cell;
+    font-size: 14px;
+    margin-left:14vh;
+    margin-top: 4%;
+    min-width: 120px;
+    color: white;
+    background-color: rgb(9, 10, 9);
+    
+  }
+  

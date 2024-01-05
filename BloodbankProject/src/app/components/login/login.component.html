@@ -1,0 +1,34 @@
+<mat-toolbar color="red">
+  <mat-toolbar-row>
+    <h1>Blood Bank Management System</h1>
+    <span class="spacer"></span>
+    <button mat-raised-button [routerLink]="['/aboutus']">AboutUs</button>
+    <button mat-raised-button [routerLink]="['/contactus']">ContactUs</button>
+  </mat-toolbar-row> 
+</mat-toolbar>
+<form [formGroup]=login>
+  <div class="bk">
+  
+    <div class="c1">
+      <p><b>LOGIN FORM</b></p>
+      <br>
+      <mat-form-field appearence="fill" class="width-100">
+        <mat-label>UserName:</mat-label>
+        <input matInput type="text" placeholder="Enter your UserName" formControlName="uname" required> 
+      </mat-form-field>
+      <br>
+      <mat-form-field appearence="fill" class="width-100">
+        <mat-label>Password:</mat-label>
+        <input matInput [type]="hide ? 'password':'text'" placeholder="Enter your Password" formControlName="pwd" required>
+        <i class="material-icons" matSuffix (click)="hide = !hide">
+          {{hide ? 'visibility':'visibility_off'}} 
+     </i> 
+      </mat-form-field>
+      <br>
+      <br>
+      <br>
+      <button class="submit" (click)="checkuser()" >Login</button>
+      <button  class="signup" (click)="onCreate()" >Create Account</button>
+    </div>
+  </div>
+</form>

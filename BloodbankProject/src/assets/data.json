@@ -1,0 +1,32 @@
+[
+    {
+        "id":1,
+        "bloodtype":"A+",
+        "quantity":"500ml",
+        "bagcount":10
+    },
+    {
+        "id":2,
+        "bloodtype":"A-",
+        "quantity":"500ml",
+        "bagcount":10
+    },
+    {
+        "id":3,
+        "bloodtype":"B+",
+        "quantity":"1lit",
+        "bagcount":15
+    },
+    {
+        "id":4,
+        "bloodtype":"A-",
+        "quantity":"500ml",
+        "bagcount":10
+    },
+    {
+        "id":5,
+        "bloodtype":"O+",
+        "quantity":"500ml",
+        "bagcount":20
+    }
+]

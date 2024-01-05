@@ -1,0 +1,62 @@
+mat-toolbar{
+  background-color: red;
+  color: seashell;
+}
+h1{
+  margin-left: 30%;
+  font-size: 28px;
+}
+button{
+  margin-left: 10px;
+}
+.spacer{
+  flex:1 auto;
+}
+.bk{
+  background-Image:url("/assets/Images/aboutus.jpg") ; 
+  background-size: cover;
+  display: fill;
+  padding: 0px;
+  margin:0px;
+  width: 100vw;
+  height: 89.5vh;
+} 
+mat-card-title{
+  margin-left: 8%;
+  color: black;
+}
+.c1{
+  margin-left: 68%;
+  padding-top: 8%;
+}
+p{
+  margin-left: 28%;
+  font-size: 18px;
+}
+mat-label{
+  color: black;
+}
+.width-100{
+  width: 150%;
+  max-width: 400px;
+}
+.submit{
+  background-color: rgb(248, 215, 215);
+  border: none;
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+  padding:12px 40px;
+  border-radius: 8px;
+  margin-left: 15%;
+}
+.signup{
+  background-color: rgb(248, 215, 215);
+  border: none;
+  color: black;
+  font-weight: 500;
+  font-size: 16px;
+  padding:12px 40px;
+  border-radius: 8px;
+  margin-left: 10%;
+}

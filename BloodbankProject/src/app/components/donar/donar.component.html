@@ -1,0 +1,83 @@
+<div class="cont">
+      <button mat-raised-button  (click)="onAdd()"><i class="fa fa-plus"></i> Add Donar</button>
+      <mat-form-field>
+        <mat-label>Select a field</mat-label>
+          <mat-select [(ngModel)]="field">
+              <mat-option value="" selected></mat-option>
+              <mat-option value="DonarId">ID</mat-option>
+              <mat-option value="DonarName">Name</mat-option>
+              <mat-option value="BloodGroup">BloodGroup</mat-option>
+              <mat-option value="LastDonatedDate">Date of Donation</mat-option>
+              <mat-option value="City">City</mat-option>
+          </mat-select>
+    </mat-form-field>  
+    <mat-form-field>
+      <mat-label>Search here....</mat-label>
+      <input type="text" matInput [(ngModel)]="search">
+    </mat-form-field> 
+    <button mat-raised-button color="warn" (click)="Search()">Search</button> 
+      <table *ngIf="dataSource" mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <ng-container matColumnDef="DonarId">
+          <th mat-header-cell *matHeaderCellDef>Donar-ID</th>
+          <td mat-cell *matCellDef="let element"> {{element.DonarId}} </td>
+        </ng-container>
+        <ng-container matColumnDef="DonarName">
+          <th mat-header-cell *matHeaderCellDef> Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.DonarName}} </td>
+        </ng-container>
+        <ng-container matColumnDef="BloodGroup">
+          <th mat-header-cell *matHeaderCellDef> BloodGroup </th>
+          <td mat-cell *matCellDef="let element"> {{element.BloodGroup}} </td>
+        </ng-container>
+        <ng-container matColumnDef="Gender">
+          <th mat-header-cell *matHeaderCellDef> Gender</th>
+          <td mat-cell *matCellDef="let element"> {{element.Gender}} </td>
+        </ng-container>
+        <ng-container matColumnDef="Dob">
+          <th mat-header-cell *matHeaderCellDef> Dob</th>
+          <td mat-cell *matCellDef="let element"> {{element.Dob}} </td>
+        </ng-container>
+        <ng-container matColumnDef="Age">
+          <th mat-header-cell *matHeaderCellDef> Age</th>
+          <td mat-cell *matCellDef="let element"> {{element.Age}} </td>
+        </ng-container>
+        <ng-container matColumnDef="State">
+          <th mat-header-cell *matHeaderCellDef> State</th>
+          <td mat-cell *matCellDef="let element"> {{element.State}} </td>
+        </ng-container>
+        <ng-container matColumnDef="City">
+          <th mat-header-cell *matHeaderCellDef> City</th>
+          <td mat-cell *matCellDef="let element"> {{element.City}} </td>
+        </ng-container>
+        <ng-container matColumnDef="phoneNumber">
+          <th mat-header-cell *matHeaderCellDef> Phonenumber</th>
+          <td mat-cell *matCellDef="let element"> {{element.phoneNumber}} </td>
+        </ng-container>
+        <ng-container matColumnDef="Email">
+          <th mat-header-cell *matHeaderCellDef> Email</th>
+          <td mat-cell *matCellDef="let element"> {{element.Email}} </td>
+        </ng-container>
+        <ng-container matColumnDef="BloodAmount">
+          <th mat-header-cell *matHeaderCellDef> BloodAmount</th>
+          <td mat-cell *matCellDef="let element"> {{element.BloodAmount}} </td>
+        </ng-container>
+        <ng-container matColumnDef="LastDonatedDate">
+          <th mat-header-cell *matHeaderCellDef> LastDonatedDate</th>
+          <td mat-cell *matCellDef="let element"> {{element.LastDonatedDate}} </td>
+        </ng-container>
+        <ng-container matColumnDef="edit">
+          <th mat-header-cell *matHeaderCellDef> Edit </th>
+          <td mat-cell *matCellDef="let element"><button mat-icon-button id="btn" (click)="onEdit(element.DonarId)" ><mat-icon>edit</mat-icon></button></td>
+        </ng-container>
+        <ng-container matColumnDef="delete">
+          <th mat-header-cell *matHeaderCellDef> Delete </th>
+          <td mat-cell *matCellDef="let element"><button mat-icon-button id="btn" (click)="deleteDonar(element.DonarId)">
+            <mat-icon>delete</mat-icon></button></td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+   <mat-paginator
+  [length]="totalposts" [pageSize]= "postperpage" [pageSizeOptions]= "pageSizeOption" (page)= "onChangedPage($event)">
+  </mat-paginator> 
+</div>

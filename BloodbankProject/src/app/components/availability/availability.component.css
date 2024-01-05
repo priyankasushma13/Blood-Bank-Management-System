@@ -1,0 +1,46 @@
+button{
+  background-color: white;
+  margin-left: 7%;
+  margin-top: 3%;
+  margin-bottom: 3vh;
+}
+table {
+  padding-top: 2%;
+  width: 47%;
+  height: 40%;
+  margin-left: 25%;
+}
+.mat-header-cell{
+  font-size: 17px;
+  background-color:  rgb(233, 241, 239);
+};
+
+.mat-form-field {
+  font-size: 14px;
+  width: 10%;
+  margin-left:10vh;
+  margin-top: 0vh;
+}
+#btn{
+  margin-left: 2px;
+}
+.table-row {
+  min-height: 200vh ,
+}
+.mat-footer-row,
+.mat-header-row,
+.mat-row ,
+.mat-header-cell,
+.mat-cell{
+    display: inline-flex;
+    width: 100%;
+}
+.cont{
+  background-Image:url("/assets/Images/login.jpg") ; 
+  background-size: cover;
+  display: fill;
+  padding: 0px;
+  margin:0px;
+  width: 100vw;
+  height: 81.2vh;
+}

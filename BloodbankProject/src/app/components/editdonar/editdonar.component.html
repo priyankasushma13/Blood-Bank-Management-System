@@ -1,0 +1,75 @@
+<div class="bg" *ngIf="donar">
+    <mat-grid-list cols="2" rowHeight="400px">
+            <mat-form-field>
+                <mat-label>Donar-ID</mat-label>
+                <input matInput  placeholder="Enter ID" [(ngModel)]="donar.DonarId">
+            </mat-form-field>
+            
+            <mat-form-field>
+                <mat-label>BloodGroup</mat-label>
+                <mat-select [(ngModel)]="donar.BloodGroup">
+                    <mat-option value="" selected></mat-option>
+                    <mat-option value="O+">O+</mat-option>
+                    <mat-option value="O-">O-</mat-option>
+                    <mat-option value="AB+">AB+</mat-option>
+                    <mat-option value="AB-">AB-</mat-option>
+                    <mat-option value="A+">A+</mat-option>
+                    <mat-option value="A-">A-</mat-option>
+                    <mat-option value="B+">B+</mat-option>
+                    <mat-option value="B-">B-</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Donar Name</mat-label>
+                <input matInput type="text" [(ngModel)]="donar.DonarName">
+            </mat-form-field>
+                
+            <mat-form-field>
+                <mat-label>DOB</mat-label>
+                <input matInput [matDatepicker]="picker"  [(ngModel)]="donar.Dob">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>  
+            <mat-form-field>
+                <mat-label>Age</mat-label> 
+                <input matInput  type="number" [(ngModel)]="donar.Age">            
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>City</mat-label> 
+                <input matInput  type="text" [(ngModel)]="donar.City">            
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>State</mat-label> 
+                <input matInput  type="text" [(ngModel)]="donar.State">            
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Phonenumber</mat-label> 
+                <input matInput  type="text" [(ngModel)]="donar.phoneNumber">            
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Email</mat-label> 
+                <input matInput  type="email" [(ngModel)]="donar.Email"> 
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>last donated date</mat-label> 
+                <input matInput  type="text" [(ngModel)]="donar.LastDonatedDate">            
+            </mat-form-field>
+            <table columnspan=5>
+                <td id="rad">
+                    <mat-label>Gender</mat-label><br>
+                    <mat-radio-group aria-label="Select an mat-option" [(ngModel)]="donar.Gender">
+                        <mat-radio-button [checked]="donar.Gender=='Male'?'true':'false'" value="Male">Male</mat-radio-button>
+                        <mat-radio-button [checked]="donar.Gender=='Female'?'true':'false'" value="Female">Female</mat-radio-button>
+                    </mat-radio-group>
+                </td>
+                <td >
+                    <div id="amt"><mat-form-field >
+                        <mat-label >Blood Amount</mat-label> 
+                        <input matInput  type="text" [(ngModel)]="donar.BloodAmount">            
+                    </mat-form-field></div>
+                </td>
+            </table>   <br>                                        
+         <button mat-raised-button class="btn" (click)="editDonar()">Submit</button>
+        <button mat-raised-button class="btn1" type="reset">Reset</button> 
+    </mat-grid-list>
+</div>  

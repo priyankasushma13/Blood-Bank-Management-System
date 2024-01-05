@@ -1,0 +1,28 @@
+
+.mat-radio-button ~ .mat-radio-button {
+    margin-left: 30px;
+  }
+mat-form-field{
+    width:45%;
+    margin-left:2%;
+}
+#rad{
+    padding-left: 2vh;
+}
+.rad1{
+    padding-left:38vh;
+}
+#amt{
+    margin-left: 240px;
+    width:100%;
+}
+.btn{
+    margin-left: 34%;
+    background-color:rgb(92, 225, 235);
+    font-size: 16px;
+}
+.btn1{
+    margin-left: 3%;
+    background-color:rgb(240, 60, 60);
+    font-size: 16px;
+}

@@ -1,0 +1,15 @@
+<mat-toolbar fxLayout="row"  color="red">
+  <mat-toolbar-row>
+    <h1>Blood Bank Management System</h1>
+    <span class="spacer"></span>
+    <button mat-raised-button [routerLink]="['/aboutus']">AboutUs</button>
+    <button mat-raised-button [routerLink]="['/contactus']">ContactUs</button>
+    <button mat-raised-button [routerLink]="['/']">LogOut</button>
+  </mat-toolbar-row> 
+</mat-toolbar>
+<mat-tab-group mat-stretch-tabs class="tab" >
+  <mat-tab label="Home"><app-home></app-home></mat-tab>
+  <mat-tab label="Donar"> <app-donar></app-donar></mat-tab>
+  <mat-tab label="Availability"><app-availability></app-availability></mat-tab>
+  <mat-tab label="Acceptor"><app-acceptor></app-acceptor></mat-tab>
+</mat-tab-group>

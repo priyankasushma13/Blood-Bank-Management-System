@@ -1,0 +1,30 @@
+<form [formGroup]=register>
+    <div class="cont">
+        <mat-form-field >
+            <mat-label >User-ID</mat-label>
+            <input matInput type="text" placeholder="Enter ID" name="name" formControlName="uname" required>
+            <mat-error>Please provide a valid username</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Mobile Number</mat-label>
+            <input matInput type="text" placeholder="mobile no"  required formControlName="mobile">
+            <mat-error>Please provide a valid mobile number</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input matInput [type]="hide1 ? 'password':'text'" required formControlName="pwd">
+            <i class="material-icons" matSuffix (click)="hide1 = !hide1">
+                {{hide1 ? 'visibility':'visibility_off'}}
+            </i>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Confirm Password</mat-label>
+            <input matInput [type]="hide2 ? 'password':'text'" required formControlName="cpwd">
+            <i class="material-icons" matSuffix (click)="hide2 = !hide2">
+                 {{hide2 ? 'visibility':'visibility_off'}} 
+            </i>
+        </mat-form-field>
+        <button mat-button value="submit" type="submit" class="btn" (click)="check()">Submit</button>
+        <button mat-button value="reset" type="reset" class="bt2">Clear</button>
+    </div>   
+</form>

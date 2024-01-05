@@ -1,0 +1,20 @@
+mat-toolbar{
+   background-color: red;
+   color: seashell;
+}
+h1{
+   margin-left: 30%;
+   font-size: 28px;
+   flex-direction: row;
+}
+button{
+   margin-left: 10px;
+}
+.tab{
+   max-width: 1500px;
+}
+.spacer{
+   flex:1 auto;
+}
+
+
